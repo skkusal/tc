@@ -1,0 +1,1 @@
+./gcal -f ../doc/en/examples/sun-1.rc -Ux -Hno

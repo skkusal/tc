@@ -1,0 +1,2 @@
+./grep --help
+./grep -Rnw "int" *.c
