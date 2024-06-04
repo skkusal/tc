@@ -1,0 +1,29 @@
+./grep -hr -e "include" -e "asdqweasd" -e "[^~]*~" -C 100 -we "error.h"  *
+./grep --color=auto -vi -m 10 "Include" *  
+./grep -RwizZa --color=never -e "Include" -e "#include <error.h>" *
+./grep --color=never -Txi -e "Include" *
+./grep --exclude=".h" -Txin "#include <error.h>" *
+./grep -Txi --color=never "Include" *
+./grep -I -C 100 --color=never -x "#include <error.h>" *
+./grep -d recurse -cin "#Include <error.h>" *
+./grep -D read -B 10000000 -A 10 -L "#include <error.h>" *
+./grep --color=auto -bo -m 1 "include" *  
+./grep -H include HW1/grep-3.7/src/dfasearch.c
+echo $'zxczxc\asdasd\qAAweqwe' | ./grep --label=inputfile -Hw a
+./grep -hrcqs  -e "include" -e "int" -e "long" -e "float" -e ";" -e "//" -e "=" *
+./grep -E -e 's+right' -e '[[:digit:]]{4,9}' -e '(#)?include' -e '^[A-Z].*[.,]$' *
+./grep -e 'include\|int\|(#)?include' -e ".*\(txt\|doc\)" -e "abb\?c" -e 'cla[se]s' -e 'cla[^s]s' -e "a..ept" -e "t[wo]o" -e "([A-Za-z ]*)" -e "^[A-Z].*\.$" -e "^((?!include).)*$" -e "^(\w+\S+)$" -e [[:alnum:]] -e [[:alpha:]] -e [[:blank:]] -e [[:digit:]] -e [[:lower:]] -e [[:upper:]] -e "[a-zA-Z][0-9][0-9]*" *
+./grep -rqs "soughtPattern" . --include=*.h *
+./grep -Fxv -f grep.c kwsearch.c
+./grep -aioc "[-_a-z0-9 ]\{4,\}" *
+./grep -E --color=always -e '(d\{2})|(s\{2})' -e dirname.\+h -e ".*(txt|doc)" -e "abb?c" -e "(struct)" -e "free[^[:space:]]+" -e "[AEIOUaeiou]{3}" -e "[[:alpha:]]{16,20}" *
+./grep -ce "......." -e [^ae]nd -e [ae]nd -e ^[A-Z] *
+./grep --color=always -e ".*\(txt\|doc\)" -e "c\{2}|d\{3}" -e 's*right' -e 'b\?right' -e [^a-zA-Z] -e [[:xdigit:]] -e [[:punct:]] -e 'm\?an' -e "[A-Z][0-9]\+" *
+./grep -E -e "([0-9]).*\\1(p*)" -e "^([^,]*),\\1,$" -e "()q\\1"  -e "()\\1*\\1*"  -e "(.?)\\1" -e "qweqwe"   *
+./grep -E -e "\b(in)()c\\3\b" -e "()(in)c\\2" *
+./grep -E -e "^([^,]*),\\1,\\1$"  -e -e "()\\3"  *
+./grep -E -e "\ba(b)()c\\1\b" *
+./grep -E -e "(^|cat)dog" -e "([[:digit:]]).*\\1(q*)" -e "(cat|^)dog"  *
+./grep -cE "(.?)(.?)(.?)\\1\\2\\3$"  Makefile
+./grep -Erc --color=always "^[[:digit:]]*+(.?)(.?)\\1\\2"  Makefile
+./grep -P "(?<=\[')[^,]*" Makefile 
